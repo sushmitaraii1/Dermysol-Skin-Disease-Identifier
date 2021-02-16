@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,300&display=swap');
+ *{
+     margin:0;
+     padding:0;
+     text-decoration: none;
+     font-family: 'Roboto', sans-serif;
+
+ }
+ body{
+    background: #ffffff;
+    overflow-x:hidden;
+ }
+ .main-content{
+    display:flexbox;
+    background-color: #a7cdf0;
+
+ }
+ .disease_name{
+     color:#007bff;
+     position:relative;
+     margin:1rem 3rem 0rem 3rem;
+}
+.disease_info{
+    color:#343a40;
+    margin:1rem 3rem 0rem 3rem;
+
+}

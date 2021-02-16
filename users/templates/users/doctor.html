@@ -1,0 +1,320 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Dermysol</title>
+  <link rel="icon" href="{% static 'img/favicon.png'%}">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <!-- animate CSS -->
+  <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+  <!-- owl carousel CSS -->
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <!-- themify CSS -->
+  <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
+  <!-- flaticon CSS -->
+  <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+  <!-- magnific popup CSS -->
+  <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+  <!-- nice select CSS -->
+  <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+  <!-- swiper CSS -->
+  <link rel="stylesheet" href="{% static 'css/slick.css' %}">
+  <!-- style CSS -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+<script src="https://kit.fontawesome.com/65e590674d.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="{% static "users/doctor.css" %}">
+<link rel="stylesheet" href="{% static "users/dashboard.css" %}">
+</head>
+
+<body>
+  <!--::header part start::-->
+  <header class="main_menu home_menu">
+      <div class="container">
+          <div class="row align-items-center">
+              <div class="col-lg-12">
+                  <nav class="navbar navbar-expand-lg navbar-light">
+                      <a class="navbar-brand" href="{% url 'home' %}"> <img src="{% static 'img/logo_dermysol.png' %}" alt="logo"> </a>
+                      <button class="navbar-toggler" type="button" data-toggle="collapse"
+                          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                          aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                      </button>
+
+                      <div class="collapse navbar-collapse main-menu-item justify-content-center"
+                          id="navbarSupportedContent">
+                          <ul class="navbar-nav align-items-center">
+                              <li class="nav-item active">
+                                  <a class="nav-link" href="{% url 'home' %}">Home</a>
+                              </li>
+                              <li class="nav-item">
+
+                                  <a class="nav-link" href="#aboutid">About</a>
+                              </li>
+                              <li class="nav-item">
+
+                                  <a class="nav-link" href="{% url 'doctor' %}">Doctors</a>
+                              </li>
+
+
+
+
+                              <li class="nav-item">
+                              {% if user.is_authenticated %}
+                                  <a  class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
+                              {% endif %}
+                          </li>
+
+                              <li class="nav-item dropdown">
+                                  <a class="nav-link dropdown-toggle"  id="navbarDropdown"
+                                      role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      Services
+                                  </a>
+                                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                  </div>
+                              </li>
+                          </ul>
+                      </div>
+                     {% block navextra %}{% endblock %}
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+  {% block content %}
+
+  <script src="{% static 'js/jquery-1.12.1.min.js'%}"></script>
+  <!-- popper js -->
+  <script src="{% static 'js/popper.min.js'%}"></script>
+  <!-- bootstrap js -->
+  <script src="{% static 'js/bootstrap.min.js'%}"></script>
+  <!-- owl carousel js -->
+  <script src="{% static 'js/owl.carousel.min.js'%}"></script>
+  <script src="{% static 'js/jquery.nice-select.min.js'%}"></script>
+  <!-- contact js -->
+  <script src="{% static 'js/jquery.ajaxchimp.min.js'%}"></script>
+  <script src="{% static 'js/jquery.form.js'%}"></script>
+  <script src="{% static 'js/jquery.validate.min.js'%}"></script>
+  <script src="{% static 'js/mail-script.js'%}"></script>
+  <script src="{% static 'js/contact.js'%}"></script>
+  <!-- custom js -->
+  <script src="{% static 'js/custom.js'%}"></script>
+
+  {% endblock %}
+
+<!-- breadcrumb start-->
+<section class="breadcrumb_part breadcrumb_bg"  >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb_iner">
+                    <div class="breadcrumb_iner_item">
+                        <h2>doctors</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- breadcrumb start-->
+
+<!--::doctor_part start::-->
+<section class="doctor_part single_page_doctor_part">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-8">
+                <div class="section_tittle text-center">
+                    <h2>Get Cared For By The Best</h2>
+                    <p>We provide the most eminent doctors , most of whom are the finest in their respective<br> arenas and are renowned for developing innovative and revolutionary procedures.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-lg-3">
+                <div class="single_blog_item">
+                    <div class="single_blog_img">
+                        <img src="/static/img/7.jpg" alt="doctor">
+                        <div class="social_icon">
+                            <ul>
+                                <li><a href="#"> <i class="ti-facebook"></i> </a></li>
+                                <li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
+                                <li><a href="#"> <i class="ti-instagram"></i> </a></li>
+                                <li><a href="#"> <i class="ti-skype"></i> </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="single_text">
+                        <div class="single_blog_text">
+                          <h3>Dr. Sarita Shrestha<br>Junior Consutant</h3>
+                          <p><b>Degree:</b>MBBS(2010),PhD(2015)</p>
+<!--                          <p><b>experince:</b>good exposure to skin diseases and sexually transmitted infections.</p>-->
+<!--                          <p><b>Specialization:</b>good skill in botox injection, dermal fillers, and different types of laser.</p>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="single_blog_item">
+                    <div class="single_blog_img">
+                        <img src="/static/img/8.jpg" alt="doctor">
+                        <div class="social_icon">
+                            <ul>
+                                <li><a href="#"> <i class="ti-facebook"></i> </a></li>
+                                <li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
+                                <li><a href="#"> <i class="ti-instagram"></i> </a></li>
+                                <li><a href="#"> <i class="ti-skype"></i> </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="single_text">
+                        <div class="single_blog_text">
+                          <h3>Dr.Adam Billiard<br>Senior Medical Officer</h3>
+                          <p><b>Degree:</b>MBBS(1980),PhD(1983)</p>
+                          <!--<p><b>experince:</b>good exposure to skin diseaseslike warts basel cell carcinoma.</p>
+                          <p><b>Specialization:</b>good skill in botox injection, dermal fillers, and different types of laser.</p>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="single_blog_item">
+                    <div class="single_blog_img">
+                        <img src="/static/img/9.jpg" alt="doctor">
+                        <div class="social_icon">
+                            <ul>
+                                <li><a href="#"> <i class="ti-facebook"></i> </a></li>
+                                <li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
+                                <li><a href="#"> <i class="ti-instagram"></i> </a></li>
+                                <li><a href="#"> <i class="ti-skype"></i> </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="single_text">
+                        <div class="single_blog_text">
+                          <h3>Dr. Justin Staurd<br>Senior Medical Officer </h3>
+                          <p><b>Degree:</b>MBBS(1980),PhD(1985)</p>
+                          <!--<p><b>experince:</b>good exposure to skin diseases like herpes and vasculitis.</p>
+                          <p><b>Specialization:</b>good skill in dermal fillers, and different types of laser treatment.</p>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="single_blog_item">
+                    <div class="single_blog_img">
+                        <img src="/static/img/10.jpg" alt="doctor">
+                        <div class="social_icon">
+                            <ul>
+                                <li><a href="#"> <i class="ti-facebook"></i> </a></li>
+                                <li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
+                                <li><a href="#"> <i class="ti-instagram"></i> </a></li>
+                                <li><a href="#"> <i class="ti-skype"></i> </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="single_text">
+                      <div class="single_blog_text">
+                        <h3>Dr.Rose Jonas<br>Senior Consultant</h3>
+                        <p><b>Degree:</b>MBBS(1985),PhD(1987)</p>
+                        <!--<p><b>experince:</b>good exposure to skin diseases and skin cancer like acne and melonoma .</p>
+                        <p><b>Specialization:</b>good skill in botox injection ,different types of laser.</p>-->
+                      </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+   <!-- <div class="wrapper">
+        <div class="sidebar">
+            <h2>DERMYSOL</h2>
+            <ul>
+                <li><a href="{% url 'dashboard' %}"><i class="fas fa-columns"></i>Dashboard</a></li>
+                <li><a href="{% url 'home' %}"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="{% url 'predictimage' %}"><i class="fas fa-upload"></i>Upload</a></li>
+                <li><a href="{% url 'doctor' %}"><i class="fas fa-stethoscope"></i>Doctors</a></li>
+                <li><a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+            </ul>
+        </div>
+    </div>-->
+<!--
+   <div class="title">
+      <h3>Get Cared For By The Best</h3>
+      <p>We provide the most eminent doctors , most of whom are the finest in their respective<br> arenas and are renowned for developing innovative and revolutionary procedures.</p>
+
+</div>-->
+<!---
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="/static/img/7.jpg" alt="doctor" >
+      <h3>Dr. Sarita Shrestha<br>Junior Consutant</h3>
+      <p><b>Degree:</b>MBBS(2010),PhD(2015)</p>
+      <p><b>experince:</b>good exposure to skin diseases and sexually transmitted infections.</p>
+      <p><b>Specialization:</b>good skill in botox injection, dermal fillers, and different types of laser.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="/static/img/8.jpg" alt="doctor">
+      <h3>Dr.Adam Billiard<br>Senior Medical Officer</h3>
+      <p><b>Degree:</b>MBBS(1980),PhD(1983)</p>
+      <p><b>experince:</b>good exposure to skin diseaseslike warts basel cell carcinoma.</p>
+      <p><b>Specialization:</b>good skill in botox injection, dermal fillers, and different types of laser.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="/static/img/9.jpg" alt="Doctor">
+      <h3>Dr. Justin Staurd<br>Senior Medical Officer </h3>
+      <p><b>Degree:</b>MBBS(1980),PhD(1985)</p>
+      <p><b>experince:</b>good exposure to skin diseases like herpes and vasculitis.</p>
+      <p><b>Specialization:</b>good skill in dermal fillers, and different types of laser treatment.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="/static/img/10.jpg" alt="Mountains">
+      <h3>Dr.Rose Jonas<br>Senior Consultant</h3>
+      <p><b>Degree:</b>MBBS(1985),PhD(1987)</p>
+      <p><b>experince:</b>good exposure to skin diseases and skin cancer like acne and melonoma .</p>
+      <p><b>Specialization:</b>good skill in botox injection ,different types of laser.</p>
+    </div>
+  </div>
+</div>-->
+<!---
+<div class="cardinfo">
+<div class="card1">
+  <img src="/static/img/7.jpg" alt="Doctor">
+  <div class="info">
+    <h3>Dr. Sarita Shrestha<br>Junior Consutant</h3>
+      <p><b>Degree:</b>MBBS(2010),PhD(2015)</p>
+      <p><b>experince:</b>good exposure to skin diseases and sexually transmitted infections.</p>
+      <p><b>Specialization:</b>good skill in botox injection, dermal fillers, and different types of laser.</p>
+  </div>
+ </div>
+ <div class="card2">
+  <img src="/static/img/8.jpg" alt="Doctor">
+  <div class="info">
+      <h3>Dr.Adam Billiard<br>Senior Medical Officer</h3>
+      <p><b>Degree:</b>MBBS(1980),PhD(1983)</p>
+      <p><b>experince:</b>good exposure to skin diseases like warts basel cell carcinoma.</p>
+      <p><b>Specialization:</b>good skill in botox injection, dermal fillers, and different types of laser.</p>
+  </div>
+ </div>
+ <div class="card3">
+  <img src="/static/img/10.jpg" alt="Doctor">
+  <div class="info">
+    <h3>Dr.Rose Jonas<br>Senior Consultant</h3>
+    <p><b>Degree:</b>MBBS(1985),PhD(1987)</p>
+    <p><b>experince:</b>good exposure to skin diseases and skin cancer like acne and melonoma .</p>
+    <p><b>Specialization:</b>good skill in botox injection ,different types of laser.</p>
+  </div>
+ </div>
+</div>-->
+
+  </body>
+</html>
