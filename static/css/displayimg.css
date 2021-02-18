@@ -4,9 +4,7 @@ div.polaroid {
   width: 25%;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin: 15px auto 25px;
-  position: center;
-  margin-left:auto;
+  margin: 15px auto 25px 500px;
   }
 		
 div.container {
