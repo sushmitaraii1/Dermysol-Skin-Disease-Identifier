@@ -14,25 +14,24 @@
     <div class="wrapper">
         <div class="sidebar">
             <h2>DERMYSOL</h2>
-            <ul>
+             <ul>
                <li><a href="{% url 'dashboard' %}"><i class="fas fa-columns"></i>Dashboard</a></li>
                <li><a href="{% url 'home' %}"><i class="fas fa-home"></i>Home</a></li>
                <li><a href="{% url 'predictimage' %}"><i class="fas fa-upload"></i>Upload</a></li>
-               <li><a href="{% url 'doctor' %}"><i class="fas fa-stethoscope"></i>Doctors</a></li>
                <li><a href="{% url 'diseaseinfo' %}"><i class="fas fa-info-circle"></i>Diseases</a></li>
                <li><a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
-            </ul>
-
+           </ul>
         </div>
         <div class="content">
+            <h3 style="color:lightblue;margin:10px 500px 10px">Your image is classified as:</h3>
             <div class="polaroid">
-                <img src={{filePathName}} alt='imagename' style="width: 100%;display:flex;margin:2rem 10rem 0rem 30rem;"> 
+                <img src={{filePathName}} alt='imagename' style="width: 100%;">
                 <br>
                 <div class="container">
                     <h2>Class : {{ prediction }}</h2>
                 </div>
-		    </div>		           
-           
+		    </div>
+
         </div>
     </div>
 </body>
