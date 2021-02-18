@@ -1,18 +1,27 @@
 {% extends 'users/base.html' %}
 {% load crispy_forms_tags %}
 {% load static %}
+{% block navextra%}
+ {% if user.is_authenticated %}
+                            <span ><a  class="btn_2 d-none d-lg-block " href="{% url 'logout' %}">Logout</a></span>
+                        {% else %}
+                            <span ><a  class="btn_2 d-none d-lg-block " href="{% url 'login' %}">Login</a></span>
+                        {% endif %}
+{% endblock %}
 {% block content %}
+
  <section class="about_us padding_top" id="aboutid">
         <div class="container">
             <div class="row justify-content-between align-items-center">
                 <div class="col-md-6 col-lg-6">
+                
                     <div class="about_us_img">
                         <img src="{% static 'img/top_service.png'%}" alt="">
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-5">
                     <div class="about_us_text">
-                        <h2>Let us take care of you.</h2>
+                        <h1>Let us take care of you</h1>
                         <p>Dermysol provides you a way to check your skin problems at your home. </p>
                         <div class="banner_item">
                             <div class="single_item">

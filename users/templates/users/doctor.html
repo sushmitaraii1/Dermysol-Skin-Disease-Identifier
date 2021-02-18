@@ -49,10 +49,7 @@
                               <li class="nav-item active">
                                   <a class="nav-link" href="{% url 'home' %}">Home</a>
                               </li>
-                              <li class="nav-item">
-
-                                  <a class="nav-link" href="#aboutid">About</a>
-                              </li>
+                            
                               <li class="nav-item">
 
                                   <a class="nav-link" href="{% url 'doctor' %}">Doctors</a>
@@ -66,19 +63,19 @@
                                   <a  class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
                               {% endif %}
                           </li>
+                          <li class="nav-item">
 
-                              <li class="nav-item dropdown">
-                                  <a class="nav-link dropdown-toggle"  id="navbarDropdown"
-                                      role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                      Services
-                                  </a>
-                                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-
-                                  </div>
-                              </li>
+                            <a class="nav-link" href="{% url 'appointment' %}">Appointment</a>
+                        </li>
+                          {% if user.is_authenticated %}
+                                                     <span ><a  class="btn_2 d-none d-lg-block " style="float:right;" href={% url 'logout' %}">Logout</a></span>
+                                                 {% else %}
+                                                     <span ><a  class="btn_2 d-none d-lg-block " href="{% url 'login' %}">Login</a></span>
+                                                 {% endif %}
+                     
                           </ul>
                       </div>
-                     {% block navextra %}{% endblock %}
+               
                   </nav>
               </div>
           </div>
@@ -228,93 +225,84 @@
         </div>
     </div>
 </section>
-   <!-- <div class="wrapper">
-        <div class="sidebar">
-            <h2>DERMYSOL</h2>
-            <ul>
-                <li><a href="{% url 'dashboard' %}"><i class="fas fa-columns"></i>Dashboard</a></li>
-                <li><a href="{% url 'home' %}"><i class="fas fa-home"></i>Home</a></li>
-                <li><a href="{% url 'predictimage' %}"><i class="fas fa-upload"></i>Upload</a></li>
-                <li><a href="{% url 'doctor' %}"><i class="fas fa-stethoscope"></i>Doctors</a></li>
-                <li><a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
-            </ul>
-        </div>
-    </div>-->
-<!--
-   <div class="title">
-      <h3>Get Cared For By The Best</h3>
-      <p>We provide the most eminent doctors , most of whom are the finest in their respective<br> arenas and are renowned for developing innovative and revolutionary procedures.</p>
+<footer class="footer-area">
+    <div class="footer section_padding">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-xl-2 col-md-4 col-sm-6 single-footer-widget">
+                    <a href="#" class="footer_logo"> <img src="{% static 'img/logo_dermysol.png' %}" alt="logo" style="height:100px; width: 700px;"></a>
+                    <p>My Dermatological Solutions</p>
+                    <div class="social_logo">
+                        <a href="#"><i class="ti-facebook"></i></a>
+                        <a href="#"> <i class="ti-twitter"></i> </a>
+                        <a href="#"><i class="ti-instagram"></i></a>
+                        <a href="#"><i class="ti-skype"></i></a>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-sm-6 col-md-4 single-footer-widget">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#aboutid">About us</a></li>
+                        <li><a href="{% url 'dashboard' %}">DashBoard</a></li>
+                        <li><a href="{% url 'doctor' %}">Doctors</a></li>
+                        <li><a href="{% url 'appointment' %}">Appointment</a></li>
+                        
+                    </ul>
+                </div>
+               
+                <div class="col-xl-2 col-sm-6 col-md-6 single-footer-widget">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Skin Diseases</a></li>
+                        <li><a href="#"> Skin Health</a></li>
+                        <li><a href="#">Know your skin</a></li>
+                        <li><a href="#">Dermatologist Guide</a></li>
+                        <li><a href="#">Treat your skin right</a></li>
+                    </ul>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-md-6 single-footer-widget">
+                    <h4>Newsletter</h4>
+                    <p>Seed good winged wherein which night multiply
+                        midst does not fruitful</p>
+                    <div class="form-wrap" id="mc_embed_signup">
+                        <form target="_blank"
+                            action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                            method="get" class="form-inline">
+                            <input class="form-control" name="EMAIL" placeholder="Your Email Address"
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '"
+                                required="" type="email">
+                            <button class="click-btn btn btn-default text-uppercase"> <i class="ti-angle-right"></i>
+                            </button>
+                            <div style="position: absolute; left: -5000px;">
+                                <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value=""
+                                    type="text">
+                            </div>
 
-</div>-->
-<!---
-<div class="row">
-  <div class="column">
-    <div class="content">
-      <img src="/static/img/7.jpg" alt="doctor" >
-      <h3>Dr. Sarita Shrestha<br>Junior Consutant</h3>
-      <p><b>Degree:</b>MBBS(2010),PhD(2015)</p>
-      <p><b>experince:</b>good exposure to skin diseases and sexually transmitted infections.</p>
-      <p><b>Specialization:</b>good skill in botox injection, dermal fillers, and different types of laser.</p>
+                            <div class="info"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="column">
-    <div class="content">
-    <img src="/static/img/8.jpg" alt="doctor">
-      <h3>Dr.Adam Billiard<br>Senior Medical Officer</h3>
-      <p><b>Degree:</b>MBBS(1980),PhD(1983)</p>
-      <p><b>experince:</b>good exposure to skin diseaseslike warts basel cell carcinoma.</p>
-      <p><b>Specialization:</b>good skill in botox injection, dermal fillers, and different types of laser.</p>
+
+    <div class="copyright_part">
+        <div class="container">
+            <div class="row align-items-center">
+                <p class="footer-text m-0 col-lg-8 col-md-12">
+Copyright &copy;<script>document.write(new Date().getFullYear());</script>Made for the purpose of Major Project <i class="ti-heart" aria-hidden="true"></i> by Ranima, Sadichhya, Sushmita, Upasana.
+
+</p>
+                <div class="col-lg-4 col-md-12 text-center text-lg-right footer-social">
+                    <a href="#"><i class="ti-facebook"></i></a>
+                    <a href="#"> <i class="ti-twitter"></i> </a>
+                    <a href="#"><i class="ti-instagram"></i></a>
+                    <a href="#"><i class="ti-skype"></i></a>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="column">
-    <div class="content">
-    <img src="/static/img/9.jpg" alt="Doctor">
-      <h3>Dr. Justin Staurd<br>Senior Medical Officer </h3>
-      <p><b>Degree:</b>MBBS(1980),PhD(1985)</p>
-      <p><b>experince:</b>good exposure to skin diseases like herpes and vasculitis.</p>
-      <p><b>Specialization:</b>good skill in dermal fillers, and different types of laser treatment.</p>
-    </div>
-  </div>
-  <div class="column">
-    <div class="content">
-    <img src="/static/img/10.jpg" alt="Mountains">
-      <h3>Dr.Rose Jonas<br>Senior Consultant</h3>
-      <p><b>Degree:</b>MBBS(1985),PhD(1987)</p>
-      <p><b>experince:</b>good exposure to skin diseases and skin cancer like acne and melonoma .</p>
-      <p><b>Specialization:</b>good skill in botox injection ,different types of laser.</p>
-    </div>
-  </div>
-</div>-->
-<!---
-<div class="cardinfo">
-<div class="card1">
-  <img src="/static/img/7.jpg" alt="Doctor">
-  <div class="info">
-    <h3>Dr. Sarita Shrestha<br>Junior Consutant</h3>
-      <p><b>Degree:</b>MBBS(2010),PhD(2015)</p>
-      <p><b>experince:</b>good exposure to skin diseases and sexually transmitted infections.</p>
-      <p><b>Specialization:</b>good skill in botox injection, dermal fillers, and different types of laser.</p>
-  </div>
- </div>
- <div class="card2">
-  <img src="/static/img/8.jpg" alt="Doctor">
-  <div class="info">
-      <h3>Dr.Adam Billiard<br>Senior Medical Officer</h3>
-      <p><b>Degree:</b>MBBS(1980),PhD(1983)</p>
-      <p><b>experince:</b>good exposure to skin diseases like warts basel cell carcinoma.</p>
-      <p><b>Specialization:</b>good skill in botox injection, dermal fillers, and different types of laser.</p>
-  </div>
- </div>
- <div class="card3">
-  <img src="/static/img/10.jpg" alt="Doctor">
-  <div class="info">
-    <h3>Dr.Rose Jonas<br>Senior Consultant</h3>
-    <p><b>Degree:</b>MBBS(1985),PhD(1987)</p>
-    <p><b>experince:</b>good exposure to skin diseases and skin cancer like acne and melonoma .</p>
-    <p><b>Specialization:</b>good skill in botox injection ,different types of laser.</p>
-  </div>
- </div>
-</div>-->
+</footer>
 
   </body>
 </html>

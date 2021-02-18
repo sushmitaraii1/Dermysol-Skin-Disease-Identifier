@@ -2987,7 +2987,7 @@ ul {
 /**************** service_part css start ****************/
 /* line 2, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_feature_part.scss */
 .feature_part {
-  padding: 140px 0 515px;
+  padding: 140px 0 80px;
 }
 
 @media (max-width: 991px) {

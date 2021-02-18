@@ -101,7 +101,7 @@
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col-xl-2 col-md-4 col-sm-6 single-footer-widget">
-                    <a href="#" class="footer_logo"> <img src="{% static 'img/logo_dermysol.png' %}" alt="logo"></a>
+                    <a href="#" class="footer_logo"><img src="{% static 'img/logo_dermysol.png' %}" alt="logo"> </a>
                     <p>My Dermatological Solutions</p>
                     <div class="social_logo">
                         <a href="#"><i class="ti-facebook"></i></a>
@@ -114,22 +114,13 @@
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="#aboutid">About us</a></li>
-                        <li><a href="#">DashBoard</a></li>
-                        <li><a href="#"></a>Doctors</li>
-                        <li><a href="#">Appointment</a></li>
-                        <li><a href="#">services</a></li>
+                        <li><a href="{% url 'dashboard' %}">DashBoard</a></li>
+                        <li><a href="{% url 'doctor' %}">Doctors</a></li>
+                        <li><a href="{% url 'appointment' %}">Appointment</a></li>
+                        
                     </ul>
                 </div>
-                <div class="col-xl-2 col-sm-6 col-md-4 single-footer-widget">
-                    <h4>Explore</h4>
-                    <ul>
-                        <li><a href="#">In the community</a></li>
-                        <li><a href="#">IU Skin health foundation</a></li>
-                        <li><a href="#">Our support </a></li>
-                        <li><a href="#">Focused solution</a></li>
-                        <li><a href="#">Community clinic</a></li>
-                    </ul>
-                </div>
+               
                 <div class="col-xl-2 col-sm-6 col-md-6 single-footer-widget">
                     <h4>Resources</h4>
                     <ul>
@@ -170,7 +161,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <p class="footer-text m-0 col-lg-8 col-md-12">
-Copyright &copy;<script>document.write(new Date().getFullYear());</script>Made for the purpose of Major Project <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Ranima,Sadichhya,Sushmita,Upasana.</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script>Made for the purpose of Major Project <i class="ti-heart" aria-hidden="true"></i> by Ranima, Sadichhya, Sushmita, Upasana.
 
 </p>
                 <div class="col-lg-4 col-md-12 text-center text-lg-right footer-social">

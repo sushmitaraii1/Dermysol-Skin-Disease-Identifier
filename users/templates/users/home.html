@@ -15,8 +15,9 @@
                 <div class="col-lg-5 col-xl-5">
                     <div class="banner_text">
                         <div class="banner_text_iner">
-                             {% if user.is_authenticated %}
-                                <h2>Hello, {{request.user}}</h2>                        {% else %}
+                             {% if user.is_authenticated %} 
+                                <strong>Hello, {{request.user}}</strong>
+                                {% else %}
                         {% endif %}
                             <h5>We are here for your care</h5>
 
@@ -51,7 +52,7 @@
                 </div>
                 <div class="col-md-6 col-lg-5">
                     <div class="about_us_text">
-                        <h2>About us</h2>
+                        <h1>About us</h1>
                         <p>Dermysol provides you a way to check your skin problems at your home. </p>
                         <div class="banner_item">
                             <div class="single_item">
@@ -86,7 +87,7 @@
                     <div class="single_feature">
                         <div class="single_feature_part">
                             <span class="single_feature_icon"><i class="fas fa-upload"></i></span>
-                            <h4>Upload Yourself</h4>
+                            <h4>Upload Image</h4>
                             <p>Click and upload your picture with ease.</p>
                         </div>
                     </div>
