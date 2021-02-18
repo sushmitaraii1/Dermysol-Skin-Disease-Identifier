@@ -49,7 +49,7 @@
                               <li class="nav-item active">
                                   <a class="nav-link" href="{% url 'home' %}">Home</a>
                               </li>
-                            
+
                               <li class="nav-item">
 
                                   <a class="nav-link" href="{% url 'doctor' %}">Doctors</a>
@@ -64,18 +64,19 @@
                               {% endif %}
                           </li>
                           <li class="nav-item">
-
-                            <a class="nav-link" href="{% url 'appointment' %}">Appointment</a>
-                        </li>
+                                {% if user.is_authenticated %}
+                                    <a  class="nav-link" href="{% url 'appointment' %}">Appointment</a>
+                                {% endif %}
+                            </li>
                           {% if user.is_authenticated %}
                                                      <span ><a  class="btn_2 d-none d-lg-block " style="float:right;" href={% url 'logout' %}">Logout</a></span>
                                                  {% else %}
                                                      <span ><a  class="btn_2 d-none d-lg-block " href="{% url 'login' %}">Login</a></span>
                                                  {% endif %}
-                     
+
                           </ul>
                       </div>
-               
+
                   </nav>
               </div>
           </div>
@@ -246,10 +247,10 @@
                         <li><a href="{% url 'dashboard' %}">DashBoard</a></li>
                         <li><a href="{% url 'doctor' %}">Doctors</a></li>
                         <li><a href="{% url 'appointment' %}">Appointment</a></li>
-                        
+
                     </ul>
                 </div>
-               
+
                 <div class="col-xl-2 col-sm-6 col-md-6 single-footer-widget">
                     <h4>Resources</h4>
                     <ul>
