@@ -15,6 +15,7 @@ CATEGORIES =["Acne-Rosacea", "Basal cell carcinoma",
 model = load_model('./models/DERMYSOLv2skin_net_frz10_100ep.hdf5')
 model.compile(optimizer = 'rmsprop', loss = 'categorical_crossentropy', metrics = ['accuracy'])
 # Create your views here.
+
 def predictimage(request):
     if request.method == 'POST':
         fileobj = request.FILES['filepath']

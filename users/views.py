@@ -4,7 +4,6 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse
-from django.contrib.auth.decorators import login_required
 from django.core.mail import mail_admins
 from .models import Disease
 
@@ -71,8 +70,8 @@ def appointment(request):
             service = f.cleaned_data['service']
             time = f.cleaned_data['time']
             print(f.cleaned_data['subject'],f.cleaned_data['note'])
-            subject = "You have a new Appointment from {}:{} for {} at {}".format(name, sender,service, time)
-            message = "Subject: {}\n\nMessage: {}".format(f.cleaned_data['subject'], f.cleaned_data['note'])
+            subject = "You have a new Appointment from {}".format(name)
+            message = "Email: {}\n\nService: {}\n\nTime: {}\n\nSubject: {}\n\nMessage: {}".format(sender,service,time,f.cleaned_data['subject'], f.cleaned_data['note'])
             mail_admins(subject, message)
             f.save()
             messages.add_message(request, messages.INFO, 'Appointment mail sent')
