@@ -70,9 +70,8 @@ def appointment(request):
             sender = f.cleaned_data['email']
             service = f.cleaned_data['service']
             time = f.cleaned_data['time']
-            print(f.cleaned_data['subject'],f.cleaned_data['note'])
             subject = "You have a new Appointment from {}:{} for {} at {}".format(name, sender,service, time)
-            message = "Subject: {}\n\nMessage: {}".format(f.cleaned_data['subject'], f.cleaned_data['note'])
+            message = "Email: {}\n\nService: {}\n\nTime: {}\n\nSubject: {}\n\nSymptoms: {}".format(sender,service,time,f.cleaned_data['subject'], f.cleaned_data['note'])
             mail_admins(subject, message)
             f.save()
             messages.add_message(request, messages.INFO, 'Appointment mail sent')
